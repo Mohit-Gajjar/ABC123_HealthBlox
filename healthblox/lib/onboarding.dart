@@ -27,7 +27,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             child: Align(
                 alignment: Alignment.bottomCenter,
                 child: GestureDetector(
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: ((context) => const Authentication()))),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: ((context) =>const Authentication()))),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),

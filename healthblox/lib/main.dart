@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:healthblox/paitent/auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:healthblox/paitent/auth.dart';
 import 'doctor/firebase_options.dart';
 
 void main() async {

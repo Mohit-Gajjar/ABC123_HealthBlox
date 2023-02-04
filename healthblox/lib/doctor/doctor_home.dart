@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class PaitentHome extends StatefulWidget {
-  const PaitentHome({super.key});
+class DoctorHome extends StatefulWidget {
+  const DoctorHome({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
-  _PaitentHomeState createState() => _PaitentHomeState();
+  _DoctorHomeState createState() => _DoctorHomeState();
 }
 
-class _PaitentHomeState extends State<PaitentHome> {
+class _DoctorHomeState extends State<DoctorHome> {
   
 
   @override

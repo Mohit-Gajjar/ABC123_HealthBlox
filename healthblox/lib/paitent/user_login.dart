@@ -91,7 +91,7 @@ class _LoginState extends State<Login> {
                 title: "Create Account",
                 height: 60,
                 width: MediaQuery.of(context).size.width,
-                onPressed: () {})
+                onPressed: authenticate)
           ],
         )),
       ),

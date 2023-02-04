@@ -62,10 +62,10 @@ class _LoginState extends State<Login> {
               ),
             ),
             const SizedBox(height: 20),
-            TextFieldEmail(controller: TextEditingController()),
+            TextFieldEmail(controller: _emailController),
             const SizedBox(height: 20),
             TextFieldPassword(
-              controller: TextEditingController(),
+              controller: _passwordController,
               hintText: "Enter password",
               labelText: "Password",
             ),
@@ -91,7 +91,7 @@ class _LoginState extends State<Login> {
                 title: "Create Account",
                 height: 60,
                 width: MediaQuery.of(context).size.width,
-                onPressed: () {})
+                onPressed: authenticate)
           ],
         )),
       ),
