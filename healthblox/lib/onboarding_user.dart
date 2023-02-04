@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:healthblox/paitent/auth_user.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class OnboardingScreenUser extends StatefulWidget {
+  const OnboardingScreenUser({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<OnboardingScreenUser> createState() => _OnboardingScreenUserState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingScreenUserState extends State<OnboardingScreenUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

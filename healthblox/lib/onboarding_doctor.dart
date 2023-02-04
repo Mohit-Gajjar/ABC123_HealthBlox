@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:healthblox/paitent/auth.dart';
+import 'package:healthblox/paitent/auth_user.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class OnboardingScreenDoctor extends StatefulWidget {
+  const OnboardingScreenDoctor({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<OnboardingScreenDoctor> createState() => _OnboardingScreenDoctorState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingScreenDoctorState extends State<OnboardingScreenDoctor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +27,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             child: Align(
                 alignment: Alignment.bottomCenter,
                 child: GestureDetector(
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: ((context) =>const Authentication()))),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const AuthenticationUser()))),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),

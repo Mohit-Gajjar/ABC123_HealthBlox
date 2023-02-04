@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:healthblox/doctor/authenticate.dart';
 import 'package:healthblox/doctor/create_account.dart';
-import 'package:healthblox/paitent/doctor_homepage.dart';
+import 'package:healthblox/doctor/doctor_home.dart';
 import 'package:healthblox/widgets.dart';
 
 class Login extends StatefulWidget {
@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
               isLoading = false;
             });
             Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => const DoctorHomePage()));
+                MaterialPageRoute(builder: (context) => const DoctorHome()));
           });
         } else {
           Fluttertoast.showToast(msg: "Password required");
