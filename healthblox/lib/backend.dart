@@ -87,4 +87,13 @@ class Backend {
   Future<DocumentSnapshot<Map<String, dynamic>>> getPaitents(String id) async {
     return FirebaseFirestore.instance.collection('paitent').doc(id).get();
   }
+
+  Future<DocumentReference<Map<String, dynamic>>> addPaitentTreatment(
+      String id, String treatment, String email, String name) async {
+    return FirebaseFirestore.instance
+        .collection('paitent')
+        .doc(id)
+        .collection("treatment")
+        .add({'treatment': treatment, 'email': email, 'name': name});
+  }
 }

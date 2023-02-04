@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:healthblox/backend.dart';
-import 'package:healthblox/doctor/create_account.dart';
 
 import '../widgets.dart';
 

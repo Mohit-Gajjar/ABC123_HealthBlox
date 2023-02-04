@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:healthblox/doctor/authenticate.dart';
 import 'package:healthblox/paitent/create_account.dart';
-import 'package:healthblox/user_home.dart';
+import 'package:healthblox/paitent/user_home.dart';
 import 'package:healthblox/widgets.dart';
 
 class Login extends StatefulWidget {

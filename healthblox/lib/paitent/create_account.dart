@@ -4,7 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:healthblox/backend.dart';
 import 'package:healthblox/paitent/authenticate.dart';
 import 'package:healthblox/paitent/user_login.dart';
-import 'package:healthblox/user_home.dart';
+import 'package:healthblox/paitent/user_home.dart';
 import 'package:healthblox/widgets.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -67,6 +67,7 @@ class _CreateAccountState extends State<CreateAccount> {
       Fluttertoast.showToast(msg: "Email required");
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,12 +88,11 @@ class _CreateAccountState extends State<CreateAccount> {
             TextFieldEmail(controller: _emailController),
             const SizedBox(height: 20),
             TextFieldText(
-                        controller: _userNameController,
-                        labelText: 'Enter User Name',
-                        hintText: 'example',
-                      ),
+              controller: _userNameController,
+              labelText: 'Enter User Name',
+              hintText: 'example',
+            ),
             const SizedBox(height: 20),
-
             TextFieldPassword(
               controller: _passwordController,
               hintText: "Enter password",

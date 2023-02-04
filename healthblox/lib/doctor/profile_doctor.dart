@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthblox/backend.dart';
-import 'package:healthblox/doctor/create_account.dart';
 
-import '../paitent/widgets.dart';
 import '../widgets.dart';
 
 class DoctorProfile extends StatefulWidget {

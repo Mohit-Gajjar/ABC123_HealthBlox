@@ -1,6 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:healthblox/backend.dart';
+import 'package:healthblox/doctor/add_treatment.dart';
 import 'package:healthblox/doctor/profile_doctor.dart';
 
 class DoctorHome extends StatefulWidget {
@@ -60,7 +61,16 @@ class _DoctorHomeState extends State<DoctorHome> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const DoctorProfile())),
-                icon: const Icon(Icons.menu))
+                icon: const Icon(Icons.menu)),
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: ()async {
+                final FirebaseAuth auth = FirebaseAuth.instance;
+                
+                  await auth.signOut();
+                
+              },
+            )
           ]),
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20),
@@ -108,6 +118,19 @@ class _DoctorHomeState extends State<DoctorHome> {
                         const SizedBox(height: 20),
                         Text('Allergies: $allergies'),
                         const SizedBox(height: 20),
+                        CustomBlackButtonRounded(
+                            title: "Add Treatment",
+                            height: 50,
+                            width: MediaQuery.of(context).size.width,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => AddTreatment(
+                                          email: email,
+                                          name: userName,
+                                          userid: id)));
+                            })
                       ],
                     )
             ],
