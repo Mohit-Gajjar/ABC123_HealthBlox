@@ -55,17 +55,17 @@ class _LoginState extends State<Login> {
           children: [
             const SizedBox(height: 100),
             const Text(
-              "Login to your Account",
+              "Login to your Paitent account",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 20),
-            TextFieldEmail(controller: TextEditingController()),
+            TextFieldEmail(controller: _emailController),
             const SizedBox(height: 20),
             TextFieldPassword(
-              controller: TextEditingController(),
+              controller: _passwordController,
               hintText: "Enter password",
               labelText: "Password",
             ),
@@ -88,7 +88,7 @@ class _LoginState extends State<Login> {
               ],
             ),
             CustomBlackButtonRounded(
-                title: "Create Account",
+                title: "Sign In",
                 height: 60,
                 width: MediaQuery.of(context).size.width,
                 onPressed: authenticate)

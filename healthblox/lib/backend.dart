@@ -7,5 +7,11 @@ class Backend {
         .doc(id)
         .set({'email': email, 'userName': userName, 'key': 'paitent'});
   }
+  Future<void> addDoctor(String email, String id, String userName) async {
+    return FirebaseFirestore.instance
+        .collection('doctor')
+        .doc(id)
+        .set({'email': email, 'userName': userName, 'key': 'doctor'});
+  }
 
 }

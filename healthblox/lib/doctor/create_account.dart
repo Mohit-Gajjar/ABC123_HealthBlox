@@ -41,7 +41,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   .then((value) {
                 var id = FirebaseAuth.instance.currentUser?.uid;
                 Backend()
-                    .addUser(
+                    .addDoctor(
                         _emailController.text, id!, _userNameController.text)
                     .then((value) {
                   setState(() {
@@ -67,6 +67,7 @@ class _CreateAccountState extends State<CreateAccount> {
       Fluttertoast.showToast(msg: "Email required");
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,13 +85,13 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             const SizedBox(height: 20),
-            TextFieldEmail(controller: TextEditingController()),
+            TextFieldEmail(controller: _emailController),
             const SizedBox(height: 20),
-             TextFieldText(
-                        controller: _userNameController,
-                        labelText: 'Enter User Name',
-                        hintText: 'example',
-                      ),
+            TextFieldText(
+              controller: _userNameController,
+              labelText: 'Enter User Name',
+              hintText: 'example',
+            ),
             const SizedBox(height: 20),
             TextFieldPassword(
               controller: _passwordController,
@@ -107,7 +108,7 @@ class _CreateAccountState extends State<CreateAccount> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: authenticate,
                 child: const BlackTextNormalStart(
                   title: 'Forgot password?',
                   size: 14,

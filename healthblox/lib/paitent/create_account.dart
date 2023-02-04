@@ -77,7 +77,7 @@ class _CreateAccountState extends State<CreateAccount> {
           children: [
             const SizedBox(height: 100),
             const Text(
-              "Create Account",
+              "Create your Paitent account",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,

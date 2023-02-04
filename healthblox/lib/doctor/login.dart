@@ -88,7 +88,7 @@ class _LoginState extends State<Login> {
               ],
             ),
             CustomBlackButtonRounded(
-                title: "Create Account",
+                title: "Sign in",
                 height: 60,
                 width: MediaQuery.of(context).size.width,
                 onPressed: authenticate)
