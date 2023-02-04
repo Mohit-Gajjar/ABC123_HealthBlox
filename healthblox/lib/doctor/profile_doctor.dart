@@ -3,6 +3,7 @@ import 'package:healthblox/backend.dart';
 import 'package:healthblox/doctor/create_account.dart';
 
 import '../paitent/widgets.dart';
+import '../widgets.dart';
 
 class DoctorProfile extends StatefulWidget {
   const DoctorProfile({super.key});
@@ -91,6 +92,34 @@ class _DoctorProfileState extends State<DoctorProfile> {
               ],
             ),
           ),
+        ));
+  }
+}
+
+class CustomBlackButtonRounded extends StatelessWidget {
+  final String title;
+  final double height, width;
+  final VoidCallback onPressed;
+  const CustomBlackButtonRounded({
+    Key? key,
+    required this.title,
+    required this.height,
+    required this.width,
+    required this.onPressed,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        style: ButtonStyle(
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10))),
+            fixedSize: MaterialStateProperty.all(Size(width, height)),
+            backgroundColor: MaterialStateProperty.all(Colors.black)),
+        onPressed: onPressed,
+        child: Text(
+          title,
+          style: const TextStyle(color: Colors.white),
         ));
   }
 }

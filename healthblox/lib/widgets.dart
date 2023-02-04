@@ -133,3 +133,30 @@ class BlackTextNormalCenter extends StatelessWidget {
     );
   }
 }
+
+
+class TextFieldText extends StatelessWidget {
+  final TextEditingController controller;
+  final String hintText, labelText;
+  const TextFieldText({
+    Key? key,
+    required this.controller,
+    required this.hintText,
+    required this.labelText,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      keyboardType: TextInputType.text,
+      controller: controller,
+      decoration: InputDecoration(
+          prefixIcon: const Icon(Icons.text_fields),
+          hintText: hintText,
+          label: Text(labelText),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          )),
+    );
+  }
+}

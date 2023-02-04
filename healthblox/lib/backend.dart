@@ -83,4 +83,8 @@ class Backend {
       'experience': experience
     });
   }
+
+  Future<DocumentSnapshot<Map<String, dynamic>>> getPaitents(String id) async {
+    return FirebaseFirestore.instance.collection('paitent').doc(id).get();
+  }
 }
