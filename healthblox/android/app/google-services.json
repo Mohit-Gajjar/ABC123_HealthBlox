@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "654292963388",
+    "project_id": "healthblox",
+    "storage_bucket": "healthblox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654292963388:android:7961d58aa085c21d54f339",
+        "android_client_info": {
+          "package_name": "com.example.healthblox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654292963388-2gs9detdaqkb9snsi3r8206elphnq9ts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_ML1H500irSKK2xd51oct6h-6vdE9k8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654292963388-2gs9detdaqkb9snsi3r8206elphnq9ts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
